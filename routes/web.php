@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,9 +47,38 @@ Route::get('/about-us', function () {
 })->name('about-us');
 
 
+Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+    Route::group(['prefix'=>'projects'],function (){
+        Route::get('/', [ProjectController::class,'index'])->name('admin-projects');
+
+        Route::get('/new', function () {
+            return view('admin.projects.new');
+        })->name('admin-projects-new');
+
+        Route::post('/new', [ProjectController::class, 'store'])->name('admin-projects-store');
+
+        Route::post('/image-upload', [ProjectController::class, 'upload'])->name('projects.image-upload');
+
+        Route::get('/view/{slug}', [ProjectController::class,'show'])->name('admin-projects-view');
+
+        Route::get('/edit/{slug}', [ProjectController::class,'edit'])->name('admin-projects-edit');
+
+        Route::post('/edit/{slug}', [ProjectController::class, 'update'])->name('admin-projects-update');
+
+        Route::get('/delete/{slug}', [ProjectController::class, 'destroy'])->name('admin-projects-delete');
+
+
+    });
+
+
+
+
+});
+
+
 
 require __DIR__.'/auth.php';
