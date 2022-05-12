@@ -21,6 +21,8 @@
 
                 <!-- Navbar -->
                 <nav id="navbar-collapse" class="nav__wrap collapse navbar-collapse">
+                    <form id="logout" method="post" action="{{route('logout')}}" >
+                        @csrf
                     <ul class="nav__menu nav___menu ">
                         <li class="">
                             <a href="{{route('dashboard')}}" aria-haspopup="true">Dashboard</a>
@@ -29,12 +31,18 @@
                             <a href="{{route('admin-projects')}}" aria-haspopup="true">Projects</a>
                         </li>
                         <li class="">
-                            <a href="{{route('dashboard')}}" aria-haspopup="true">Blog Posts</a>
+                            <a href="{{route('admin-blogs')}}" aria-haspopup="true">Blog Posts</a>
                         </li>
                         <li class="">
-                            <a href="{{route('dashboard')}}" aria-haspopup="true">Logout</a>
+
+{{--                                <button type="submit" >Logout</button>--}}
+                                <a href="javascript:{}" onclick="document.getElementById('logout').submit();">Logout</a>
+
+
+
                         </li>
                     </ul> <!-- end menu -->
+                    </form>
 
                     <div class="profile">
                         <a href="#" >

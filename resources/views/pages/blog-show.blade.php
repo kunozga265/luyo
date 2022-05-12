@@ -1,6 +1,6 @@
 <x-guest-layout>
     <!-- Page Title -->
-    <section class="page-title page-title--tall blog-featured-img bg-dark-overlay text-center" style="background-image: url({{asset('img/blog/featured.jpg')}});">
+    <section class="page-title page-title--tall blog-featured-img bg-dark-overlay text-center" style="background-image: url({{asset('img/blogs/featured.jpg')}});">
         <div class="container">
             <div class="page-title__holder">
                 <h1 class="page-title__title">Glass House is big on efficiency, not so big on privacy.</h1>
@@ -76,7 +76,7 @@
                                             listening to music.</p>
 
                                         <figure class="alignleft">
-                                            <img src="{{asset('img/blog/post_img_1.jpg')}}" alt="">
+                                            <img src="{{asset('img/blogs/post_img_1.jpg')}}" alt="">
                                             <figcaption>Having specific asks</figcaption>
                                         </figure>
 
@@ -96,7 +96,7 @@
                                         <h3>Stylish article pages</h3>
 
                                         <figure class="alignright">
-                                            <img src="{{asset('img/blog/post_img_2.jpg')}}" alt="">
+                                            <img src="{{asset('img/blogs/post_img_2.jpg')}}" alt="">
                                             <figcaption>make it happen</figcaption>
                                         </figure>
 
@@ -149,8 +149,8 @@
                                     <div class="col-lg-4 col-md-6">
                                         <article class="entry">
                                             <div class="entry__img-holder">
-                                                <a href="{{route('blog.show',['id'=>1])}}">
-                                                    <img src="{{asset('img/blog/post_1.jpg')}}" class="entry__img" alt="">
+                                                <a href="{{route('blogs.show',['id'=>1])}}">
+                                                    <img src="{{asset('img/blogs/post_1.jpg')}}" class="entry__img" alt="">
                                                 </a>
                                             </div>
                                             <div class="entry__body">
@@ -160,9 +160,9 @@
                                                     </li>
                                                 </ul>
                                                 <h2 class="entry__title">
-                                                    <a href="{{route('blog.show',['id'=>1])}}">Glass House is big on efficiency, not so big on privacy.</a>
+                                                    <a href="{{route('blogs.show',['id'=>1])}}">Glass House is big on efficiency, not so big on privacy.</a>
                                                 </h2>
-                                                <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                                                <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                                     <span class="read-more__text">Read More</span>
                                                     <i class="ui-arrow-right read-more__icon"></i>
                                                 </a>
@@ -173,8 +173,8 @@
                                     <div class="col-lg-4 col-md-6">
                                         <article class="entry">
                                             <div class="entry__img-holder">
-                                                <a href="{{route('blog.show',['id'=>1])}}">
-                                                    <img src="{{asset('img/blog/post_2.jpg')}}" class="entry__img" alt="">
+                                                <a href="{{route('blogs.show',['id'=>1])}}">
+                                                    <img src="{{asset('img/blogs/post_2.jpg')}}" class="entry__img" alt="">
                                                 </a>
                                             </div>
                                             <div class="entry__body">
@@ -184,9 +184,9 @@
                                                     </li>
                                                 </ul>
                                                 <h2 class="entry__title">
-                                                    <a href="{{route('blog.show',['id'=>1])}}">Rome may not have been built in a day, but this shipping container media lab was.</a>
+                                                    <a href="{{route('blogs.show',['id'=>1])}}">Rome may not have been built in a day, but this shipping container media lab was.</a>
                                                 </h2>
-                                                <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                                                <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                                     <span class="read-more__text">Read More</span>
                                                     <i class="ui-arrow-right read-more__icon"></i>
                                                 </a>
@@ -197,8 +197,8 @@
                                     <div class="col-lg-4 col-md-6">
                                         <article class="entry">
                                             <div class="entry__img-holder">
-                                                <a href="{{route('blog.show',['id'=>1])}}">
-                                                    <img src="{{asset('img/blog/post_3.jpg')}}" class="entry__img" alt="">
+                                                <a href="{{route('blogs.show',['id'=>1])}}">
+                                                    <img src="{{asset('img/blogs/post_3.jpg')}}" class="entry__img" alt="">
                                                 </a>
                                             </div>
                                             <div class="entry__body">
@@ -208,9 +208,9 @@
                                                     </li>
                                                 </ul>
                                                 <h2 class="entry__title">
-                                                    <a href="{{route('blog.show',['id'=>1])}}">Timber screens shield glass house from summer sun.</a>
+                                                    <a href="{{route('blogs.show',['id'=>1])}}">Timber screens shield glass house from summer sun.</a>
                                                 </h2>
-                                                <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                                                <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                                     <span class="read-more__text">Read More</span>
                                                     <i class="ui-arrow-right read-more__icon"></i>
                                                 </a>

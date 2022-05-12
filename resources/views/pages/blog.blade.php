@@ -24,7 +24,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_1.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -35,9 +35,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">Glass House is big on efficiency, not so big on privacy.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">Glass House is big on efficiency, not so big on privacy.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -48,7 +48,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_2.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -59,9 +59,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">Rome may not have been built in a day, but this shipping container media lab was.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">Rome may not have been built in a day, but this shipping container media lab was.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -72,7 +72,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_3.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -83,9 +83,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">Timber screens shield glass house from summer sun.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">Timber screens shield glass house from summer sun.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -96,7 +96,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_4.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -107,9 +107,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">BIG's bow tie-shaped theater offers a glimpse behind the scenes.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">BIG's bow tie-shaped theater offers a glimpse behind the scenes.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -120,7 +120,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_5.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -131,9 +131,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">Aston Martin's luxury condo revs up for 2021 completion.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">Aston Martin's luxury condo revs up for 2021 completion.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -144,7 +144,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_6.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -155,9 +155,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">Perkins+Will goes back to school with sustainable university building.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">Perkins+Will goes back to school with sustainable university building.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -168,7 +168,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_7.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -179,9 +179,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">"Haarlem Shuffle" floating home provides an energy-neutral haven.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">"Haarlem Shuffle" floating home provides an energy-neutral haven.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -192,7 +192,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_8.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -203,9 +203,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">Tech-packed luxury apartment complex planned for Melbourne.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">Tech-packed luxury apartment complex planned for Melbourne.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -216,7 +216,7 @@
                 <div class="col-lg-4 col-md-6">
                     <article class="entry">
                         <div class="entry__img-holder">
-                            <a href="{{route('blog.show',['id'=>1])}}">
+                            <a href="{{route('blogs.show',['id'=>1])}}">
                                 <img src="img/blog/post_9.jpg" class="entry__img" alt="">
                             </a>
                         </div>
@@ -227,9 +227,9 @@
                                 </li>
                             </ul>
                             <h2 class="entry__title">
-                                <a href="{{route('blog.show',['id'=>1])}}">The Frame Design Awards crown the world’s best interiors.</a>
+                                <a href="{{route('blogs.show',['id'=>1])}}">The Frame Design Awards crown the world’s best interiors.</a>
                             </h2>
-                            <a href="{{route('blog.show',['id'=>1])}}" class="read-more">
+                            <a href="{{route('blogs.show',['id'=>1])}}" class="read-more">
                                 <span class="read-more__text">Read More</span>
                                 <i class="ui-arrow-right read-more__icon"></i>
                             </a>
@@ -249,5 +249,5 @@
             </nav>
 
         </div>
-    </section> <!-- end blog -->
+    </section> <!-- end blogs -->
 </x-guest-layout>
