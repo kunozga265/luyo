@@ -6,8 +6,8 @@
 
                 <div class="nav__header">
                     <!-- Logo -->
-                    <a href="{{route('home')}}" class="logo-container flex-child">
-                        <img class="logo" src="{{asset('img/logo.png')}}" alt="logo">
+                    <a href="{{route('dashboard')}}" class="logo-container flex-child">
+                        <img class="logo" src="{{asset('images/logo.png')}}" alt="logo">
                     </a>
 
                     <!-- Mobile toggle -->
@@ -46,8 +46,8 @@
 
                     <div class="profile">
                         <a href="#" >
-                            <p>Kunozga Mlowoka</p>
-                            <span>kunozmlowoka@gmail.com</span>
+                            <p>{{Auth::user()->name}}</p>
+                            <span>{{Auth::user()->email}}</span>
                         </a>
                     </div>
 

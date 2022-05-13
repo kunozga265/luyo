@@ -50,7 +50,7 @@
                 </x-button>
             </div>--}}
 
-            <!-- Email -->
+                <!-- Email -->
                 <div class="material__form-group form-group">
                     <input type="email" name="email" id="email" class="form-input material__input" required="" autocomplete="luyo-email">
                     <label for="email" class="material__label">Email</label>
@@ -68,13 +68,13 @@
                     <input type="submit" class="btn btn--lg btn--color btn--button" value="Login" id="submit-message">
                 </div>
 
-              {{--  <div>
+                <div>
                     @if (Route::has('password.request'))
                         <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                             {{ __('Forgot your password?') }}
                         </a>
                     @endif
-                </div>--}}
+                </div>
 
             </form>
         </div>

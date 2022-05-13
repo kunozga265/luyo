@@ -6,7 +6,7 @@
                 <div class="nav__header">
                     <!-- Logo -->
                     <a href="{{route('home')}}" class="logo-container flex-child">
-                        <img class="logo" src="{{asset('img/logo.png')}}" alt="logo">
+                        <img class="logo" src="{{asset('images/logo.png')}}" alt="logo">
                     </a>
 
                     <!-- Mobile toggle -->
@@ -34,17 +34,17 @@
                             <a href="{{route('construction-plant')}}" aria-haspopup="true">Construction Plant</a>
                         </li>
                         <li class="">
-                            <a href="{{route('blog')}}" aria-haspopup="true">Blog</a>
+                            <a href="{{route('blogs')}}" aria-haspopup="true">Blog</a>
                         </li>
                         <li class="">
                             <a href="{{route('about-us')}}" aria-haspopup="true">About Us</a>
                         </li>
                         {{--<li class="nav__dropdown">
-                            <a href="blog.html" aria-haspopup="true">Blog</a>
+                            <a href="blogs.html" aria-haspopup="true">Blog</a>
                             <i class="ui-arrow-down nav__dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false"></i>
                             <ul class="nav__dropdown-menu">
-                                <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                                <li><a href="blog.html">Blog Standard</a></li>
+                                <li><a href="blogs-masonry.html">Blog Masonry</a></li>
+                                <li><a href="blogs.html">Blog Standard</a></li>
                                 <li><a href="single-post.html">Single Post</a></li>
                             </ul>
                         </li>
@@ -92,7 +92,7 @@
                         <a href="#" class="social social-youtube" aria-label="youtube" title="google plus" target="_blank"><i class="ui-youtube"></i></a>
                         <a href="#" class="social social-instagram" aria-label="instagram" title="instagram" target="_blank"><i class="ui-instagram"></i></a>
                     </div>--}}
-                    <img src="{{asset('img/edit/location.svg')}}" alt="">
+                    <img src="{{asset('images/location.svg')}}" alt="">
                     <span>
                         Tikha House, Opposite Simama Hotel.
                         First floor, Second Door to the left (Lilongwe)

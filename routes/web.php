@@ -18,35 +18,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class,'home'])->name('home');
+Route::get('/', [
+    PageController::class,'home'
+])->name('home');
 
-Route::get('/services', function () {
-    return view('pages.services');
-})->name('services');
+Route::get('/services', [
+    PageController::class,'services'
+])->name('services');
 
-Route::get('/projects', function () {
-    return view('pages.projects');
-})->name('projects');
+Route::get('/projects', [
+    PageController::class,'projects'
+])->name('projects');
 
-Route::get('/projects/{id}', function () {
-    return view('pages.projects-show');
-})->name('projects.show');
+Route::get('/projects/{slug}', [
+    PageController::class, 'projectShow'
+])->name('projects.show');
 
-Route::get('/construction-plant', function () {
-    return view('pages.construction-plant');
-})->name('construction-plant');
+Route::get('/construction-plant', [
+    PageController::class,'construction'
+])->name('construction-plant');
 
-Route::get('/blogs', function () {
-    return view('pages.blogs');
-})->name('blogs');
+Route::get('/blogs', [
+    PageController::class,'blogs'
+])->name('blogs');
 
-Route::get('/blogs/{id}', function () {
-    return view('pages.blogs-show');
-})->name('blogs.show');
+Route::get('/blogs/{slug}',[
+    PageController::class,'blogShow'
+])->name('blogs.show');
 
-Route::get('/about-us', function () {
-    return view('pages.aboutUs');
-})->name('about-us');
+Route::get('/about-us',[
+    PageController::class,'aboutUs'
+])->name('about-us');
 
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
@@ -60,23 +62,37 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     })->name('logout');
 
     Route::group(['prefix'=>'projects'],function (){
-        Route::get('/', [ProjectController::class,'index'])->name('admin-projects');
+        Route::get('/', [
+            ProjectController::class,'index'
+        ])->name('admin-projects');
 
         Route::get('/new', function () {
             return view('admin.projects.new');
         })->name('admin-projects-new');
 
-        Route::post('/new', [ProjectController::class, 'store'])->name('admin-projects-store');
+        Route::post('/new', [
+            ProjectController::class, 'store'
+        ])->name('admin-projects-store');
 
-        Route::post('/image-upload', [ProjectController::class, 'upload'])->name('projects.image-upload');
+        Route::post('/image-upload', [
+            ProjectController::class, 'upload'
+        ])->name('projects.image-upload');
 
-        Route::get('/view/{slug}', [ProjectController::class,'show'])->name('admin-projects-view');
+        Route::get('/view/{slug}', [
+            ProjectController::class,'show'
+        ])->name('admin-projects-view');
 
-        Route::get('/edit/{slug}', [ProjectController::class,'edit'])->name('admin-projects-edit');
+        Route::get('/edit/{slug}', [
+            ProjectController::class,'edit'
+        ])->name('admin-projects-edit');
 
-        Route::post('/edit/{slug}', [ProjectController::class, 'update'])->name('admin-projects-update');
+        Route::post('/edit/{slug}', [
+            ProjectController::class, 'update'
+        ])->name('admin-projects-update');
 
-        Route::get('/delete/{slug}', [ProjectController::class, 'destroy'])->name('admin-projects-delete');
+        Route::get('/delete/{slug}', [
+            ProjectController::class, 'destroy'
+        ])->name('admin-projects-delete');
 
     });
 

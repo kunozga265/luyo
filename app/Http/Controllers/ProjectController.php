@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Mews\Purifier\Facades\Purifier;
+use function asset;
+use function public_path;
+use function view;
 
 class ProjectController extends Controller
 {
@@ -60,6 +62,7 @@ class ProjectController extends Controller
 
         $date=Carbon::createFromFormat("m/d/Y",$request->completed_date)->getTimestamp();
 
+
         Project::create([
             'title'             =>  ucwords($request->title),
             'slug'              =>  $slug,
@@ -67,7 +70,7 @@ class ProjectController extends Controller
             'client'            =>  ucwords($request->client),
             'location'          =>  ucwords($request->location),
             'completed_date'    =>  $date,
-            'body'              =>  Purifier::clean($request->body),
+            'body'              =>  $request->body,
         ]);
 
         return Redirect::route('admin-projects');
@@ -112,7 +115,7 @@ class ProjectController extends Controller
                 'client'            =>  ucwords($request->client),
                 'location'          =>  ucwords($request->location),
                 'completed_date'    =>  $date,
-                'body'              =>  Purifier::clean($request->body),
+                'body'              =>  $request->body,
             ]);
 
             return Redirect::route('admin-projects-view',['slug'=>$project->slug]);
