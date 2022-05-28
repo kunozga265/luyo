@@ -175,7 +175,7 @@
                         <div class="row">
 
                             @foreach($blogs as $blog)
-                                <div class="col-md-12 col-lg-4">
+                                <div class="col-md-12 col-lg-4" style="margin-bottom: 56px;">
                                     <a href="{{route('blogs.show',['slug'=>$blog->slug])}}">
                                     <article class="entry">
                                         <div class="entry__img-holder">
