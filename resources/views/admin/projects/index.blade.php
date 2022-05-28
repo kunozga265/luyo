@@ -34,4 +34,6 @@
         </div>
 
     @endforeach
+
+    {{$projects->links()}}
 </x-app-layout>

@@ -31,4 +31,6 @@
         </div>
 
     @endforeach
+
+    {{$blogs->links()}}
 </x-app-layout>

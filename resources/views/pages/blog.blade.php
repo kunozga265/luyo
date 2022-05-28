@@ -22,7 +22,7 @@
             <div class="row">
 
                 @foreach($blogs as $blog)
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-12 col-lg-4" style="margin-bottom: 56px;">
                         <a href="{{route('blogs.show',['slug'=>$blog->slug])}}">
                             <article class="entry">
                                 <div class="entry__img-holder">
@@ -44,14 +44,7 @@
                 @endforeach
             </div> <!-- end row -->
 
-        {{--    <!-- Pagination -->
-            <nav class="pagination">
-                <span aria-current="page" class="page-numbers current">1</span>
-                <a href="#" class="page-numbers">2</a>
-                <a href="#" class="page-numbers">3</a>
-                <a href="#" class="page-numbers">4</a>
-                <a href="#" class="next page-numbers"><i class="ui-arrow-right"></i></a>
-            </nav>--}}
+            {{$blogs->links()}}
 
         </div>
     </section> <!-- end blogs -->
