@@ -18,7 +18,7 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $projects=Project::orderBy('completed_date','DESC')->get();
+        $projects=Project::orderBy('completed_date','DESC')->paginate(10);
 
         return view('admin.projects.index')->with('projects',ProjectResource::collection($projects));
     }
@@ -29,7 +29,7 @@ class ProjectController extends Controller
         if(is_object($project)){
             return view('admin.projects.show')->with('project',$project);
         }else
-            return Redirect::route('admin-projects')->with('status','Project not found');
+            return Redirect::route('admin-projects')->with('error','Project not found');
 
     }
 
@@ -39,7 +39,7 @@ class ProjectController extends Controller
         if(is_object($project)){
             return view('admin.projects.edit')->with('project',$project);
         }else
-            return Redirect::route('admin-projects')->with('status','Project not found');
+            return Redirect::route('admin-projects')->with('error','Project not found');
 
     }
 
@@ -73,7 +73,7 @@ class ProjectController extends Controller
             'body'              =>  $request->body,
         ]);
 
-        return Redirect::route('admin-projects');
+        return Redirect::route('admin-projects')->with('success','Project created!');
     }
 
     public function update(Request $request, $slug)
@@ -118,10 +118,10 @@ class ProjectController extends Controller
                 'body'              =>  $request->body,
             ]);
 
-            return Redirect::route('admin-projects-view',['slug'=>$project->slug]);
+            return Redirect::route('admin-projects-view',['slug'=>$project->slug])->with('success','Project updated!');
 
         }else
-            return Redirect::route('admin-projects')->with('status','Project not found');
+            return Redirect::route('admin-projects')->with('error','Project not found');
 
 
     }
@@ -136,9 +136,9 @@ class ProjectController extends Controller
 
             $project->delete();
 
-            return Redirect::route('admin-projects');
+            return Redirect::route('admin-projects')->with('success','Project deleted!');
         }else
-            return Redirect::route('admin-projects')->with('status','Project not found');
+            return Redirect::route('admin-projects')->with('error','Project not found');
 
     }
 

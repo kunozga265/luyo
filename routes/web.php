@@ -52,9 +52,17 @@ Route::get('/about-us',[
 
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard',[
+        PageController::class,'dashboard'
+    ])->name('dashboard');
+
+    Route::get('/change-password',function (){
+        return view('admin.change-password');
+    })->name('change-password-view');
+
+    Route::post('/change-password',[
+        PageController::class,'changePassword'
+    ])->name('change-password');
 
     Route::post('/logout', function () {
         Auth::logout();

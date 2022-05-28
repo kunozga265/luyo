@@ -26,7 +26,7 @@
                             <article class="mb-0">
                                 <div class="entry__article-wrap">
 
-                                    <!-- Share -->
+                                {{--    <!-- Share -->
                                     <div class="entry__share">
                                         <div class="sticky-col">
                                             <div class="socials socials--rounded socials--base">
@@ -41,7 +41,7 @@
                                                  </a>
                                             </div>
                                         </div>
-                                    </div> <!-- end share -->
+                                    </div> <!-- end share -->--}}
 
                                     <div class="entry__article">
 

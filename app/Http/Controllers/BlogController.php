@@ -16,7 +16,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs=Blog::latest()->get();
+        $blogs=Blog::latest()->paginate(10);
 
         return view('admin.blogs.index')->with('blogs',$blogs);
     }
@@ -27,7 +27,7 @@ class BlogController extends Controller
         if(is_object($blog)){
             return view('admin.blogs.show')->with('blog',$blog);
         }else
-            return Redirect::route('admin-blogs')->with('status','Blog not found');
+            return Redirect::route('admin-blogs')->with('error','Blog not found');
 
     }
 
@@ -38,7 +38,7 @@ class BlogController extends Controller
             return view('admin.blogs.edit')->with('blog',$blog);
 
         }else
-            return Redirect::route('admin-blogs')->with('status','Blogs not found');
+            return Redirect::route('admin-blogs')->with('error','Blog not found');
 
     }
 
@@ -63,7 +63,7 @@ class BlogController extends Controller
             'body'              =>  $request->body,
         ]);
 
-        return Redirect::route('admin-blogs');
+        return Redirect::route('admin-blogs')->with('success','Blog created!');
     }
 
     public function update(Request $request, $slug)
@@ -97,10 +97,10 @@ class BlogController extends Controller
                 'body'              =>  $request->body,
             ]);
 
-            return Redirect::route('admin-blogs-view',['slug'=>$blog->slug]);
+            return Redirect::route('admin-blogs-view',['slug'=>$blog->slug])->with('success','Blog updated!');
 
         }else
-            return Redirect::route('admin-blogs')->with('status','blogs not found');
+            return Redirect::route('admin-blogs')->with('error','Blog not found');
 
 
     }
@@ -115,9 +115,9 @@ class BlogController extends Controller
 
             $blog->delete();
 
-            return Redirect::route('admin-blogs');
+            return Redirect::route('admin-blogs')->with('success','Blog deleted!');
         }else
-            return Redirect::route('admin-blogs')->with('status','Blog not found');
+            return Redirect::route('admin-blogs')->with('error','Blog not found');
 
     }
 
