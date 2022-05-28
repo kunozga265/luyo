@@ -6,11 +6,60 @@ use App\Models\Blog;
 use App\Models\Page;
 use App\Models\Project;
 use Carbon\Carbon;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class PageController extends Controller
 {
+   /* public function changePasswordView()
+    {
+        $user=User::find(Auth::id());
+
+        Validator::make($request->all(), [
+            'password' => ['required', 'string'],
+            'newPassword'=> ['required', 'string']
+        ])->validate();
+
+        if(Hash::check($request->password, $user->password)){
+            $user->forceFill([
+                'password' => Hash::make($request->newPassword),
+            ])->save();
+        }
+        return Redirect::route('dashboard');
+    }*/
+
+    public function changePassword(Request $request)
+    {
+        $user=User::find(Auth::id());
+
+        Validator::make($request->all(), [
+            'password' => ['required', 'string','min:8'],
+            'newPassword'=> ['required', 'string','min:8']
+        ])->validate();
+
+        if(Hash::check($request->password, $user->password)){
+            $user->forceFill([
+                'password' => Hash::make($request->newPassword),
+            ])->save();
+            return Redirect::route('dashboard')->with('success','Password updated!');
+        }else
+            return Redirect::back()->with('error',"The provided password does not match your current password.");
+
+    }
+
+    public function dashboard()
+    {
+
+        $projects=Project::orderBy('completed_date','DESC')->limit(3)->get();
+        $blogs=Blog::latest()->limit(3)->get();
+
+        return view('dashboard')->with('projects',$projects)->with('blogs',$blogs);
+    }
+
     public function home()
     {
         $page=Page::where('code','home')->first();
@@ -76,7 +125,7 @@ class PageController extends Controller
         $page=Page::where('code','blog')->first();
         $page->contents=json_decode($page->contents);
 
-        $blogs=Blog::latest()->get();
+        $blogs=Blog::latest()->paginate(10);
         return view('pages.blog')->with('blogs',$blogs)->with('page',$page);
     }
 
