@@ -8,8 +8,12 @@
             <p>Send us a message if you would like to enquire about anything</p>
         </div>
 
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
         <!-- Contact Form -->
-        <form id="contact-form" class="contact-form material" method="post" action="#">
+        <form id="contact-form" class="contact-form material" method="post" action="{{route('contact-us')}}">
+
+            @csrf
 
             <div class="row">
                 <!-- Name -->

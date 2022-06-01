@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactUs;
 use App\Models\Blog;
 use App\Models\Page;
 use App\Models\Project;
@@ -10,27 +11,34 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
 class PageController extends Controller
 {
-   /* public function changePasswordView()
+    public function contactUs(Request $request)
     {
-        $user=User::find(Auth::id());
 
         Validator::make($request->all(), [
-            'password' => ['required', 'string'],
-            'newPassword'=> ['required', 'string']
+            'name' => ['required'],
+            'email' => ['required'],
+            'message' => ['required'],
         ])->validate();
 
-        if(Hash::check($request->password, $user->password)){
-            $user->forceFill([
-                'password' => Hash::make($request->newPassword),
-            ])->save();
-        }
-        return Redirect::route('dashboard');
-    }*/
+        Mail::to('info@luyoconstruction.com')->send(new ContactUs(
+            $request->subject,
+            $request->name,
+            $request->email,
+            $request->message
+        ));
+
+        if(count(Mail::failures()) > 0){
+            return Redirect::back()->with('error',"An error occurred. Try again.");
+        }else
+            return Redirect::back()->with('success','Information submitted!');
+
+    }
 
     public function changePassword(Request $request)
     {
