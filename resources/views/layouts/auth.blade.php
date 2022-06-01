@@ -29,11 +29,11 @@
 </head>
 <body>
 <!-- Preloader -->
-<div class="loader-mask">
+{{--<div class="loader-mask">
     <div class="loader">
         "Loading..."
     </div>
-</div>
+</div>--}}
 <main class="main-wrapper">
 
     <!-- Navigation -->
