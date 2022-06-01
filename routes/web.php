@@ -22,6 +22,10 @@ Route::get('/', [
     PageController::class,'home'
 ])->name('home');
 
+Route::post('/contact-us', [
+    PageController::class,'contactUs'
+])->name('contact-us');
+
 Route::get('/services', [
     PageController::class,'services'
 ])->name('services');
