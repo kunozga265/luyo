@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name', 'LUYO Construction') }}</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{asset('/favicon.png')}}">
+
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Barlow:400,600%7COpen+Sans:400,400i,700' rel='stylesheet'>
 
