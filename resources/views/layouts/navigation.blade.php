@@ -72,7 +72,7 @@
                             <a href="#" class="social social-youtube" aria-label="youtube" title="google plus" target="_blank"><i class="ui-youtube"></i></a>
                             <a href="#" class="social social-instagram" aria-label="instagram" title="instagram" target="_blank"><i class="ui-instagram"></i></a>
                         </div>--}}
-                        <img src="{{asset('img/edit/location.svg')}}" alt="">
+                        <img src="{{asset('images/location.svg')}}" alt="">
                         <span>
                         Tikha House, Opposite Simama Hotel.
                         First floor, Second Door to the left (Lilongwe)
